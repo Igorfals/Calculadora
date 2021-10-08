@@ -8,6 +8,8 @@
 
 }
 .valor{
+    width: 438px;
+    overflow: auto;
     border: 0.01em solid rgb(44, 44, 44);
     text-align: right;
     padding: 18px;
@@ -46,4 +48,11 @@
 .botao2:active {
     background-color: rgb(13, 233, 112);
     color: rgb(0, 0, 0);
+}
+.calculadora{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    max-width: 600px;
 }
