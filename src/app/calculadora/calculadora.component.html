@@ -1,59 +1,61 @@
-<div class='row sombra' > 
-    <div class= 'col-9 valor'>
-        {{valor1}} {{tipo}} {{valor2}}
-    </div>
-    <!-- <div class='col-3 botao' (click) = "limparCalculadora()">
-        ⌦
-    </div> -->
-    <div class='col-3 botao' (click) = "limparCalculadora()">
-        CE
-    </div>
-    <div class='col-3 botao' (click)='receberValor("7")'  >
-        7
-    </div>
-    <div class='col-3 botao' (click)='receberValor("8")'>
-        8
-    </div>
-    <div class='col-3 botao' (click)='receberValor("9")'>
-        9
-    </div>
-    <div class='col-3 botao'(click)='receberTipo("/")'>
-        /
-    </div>
-    <div class='col-3 botao' (click)='receberValor("4")'>
-        4
-    </div>
-    <div class='col-3 botao' (click)='receberValor("5")'>
-        5
-    </div>
-    <div class='col-3 botao' (click)='receberValor("6")'>
-        6
-    </div>
-    <div class='col-3 botao' (click)='receberTipo("x")'>
-        x
-    </div>
-    <div class='col-3 botao' (click)='receberValor("1")'>
-        1
-    </div>
-    <div class='col-3 botao' (click)='receberValor("2")'>
-        2
-    </div>
-    <div class='col-3 botao' (click)='receberValor("3")'>
-        3
-    </div>
-    <div class='col-3 botao'(click)='receberTipo("-")'>
-        -
-    </div>
-    <div class='col-3 botao'(click)='receberValor("0")'>
-        0
-    </div>
-    <div class='col-3 botao'(click)='receberValor(".")'>
-        .
-    </div>
-    <div class='col-3 botao2'(click)= "calcularResultado()">
-        =
-    </div>
-    <div class='col-3 botao'(click)='receberTipo("+")'>
-        +
+<div class= 'container calculadora' >
+    <div class='row sombra' > 
+        <div class= 'col-9 valor'>
+            {{valor1}} {{tipo}} {{valor2}}
+        </div>
+        <!-- <div class='col-3 botao' (click) = "limparCalculadora()">
+            ⌦
+        </div> -->
+        <div class='col-3 botao' (click) = "limparCalculadora()">
+            CE
+        </div>
+        <div class='col-3 botao' (click)='receberValor("7")'  >
+            7
+        </div>
+        <div class='col-3 botao' (click)='receberValor("8")'>
+            8
+        </div>
+        <div class='col-3 botao' (click)='receberValor("9")'>
+            9
+        </div>
+        <div class='col-3 botao'(click)='receberTipo("/")'>
+            /
+        </div>
+        <div class='col-3 botao' (click)='receberValor("4")'>
+            4
+        </div>
+        <div class='col-3 botao' (click)='receberValor("5")'>
+            5
+        </div>
+        <div class='col-3 botao' (click)='receberValor("6")'>
+            6
+        </div>
+        <div class='col-3 botao' (click)='receberTipo("x")'>
+            x
+        </div>
+        <div class='col-3 botao' (click)='receberValor("1")'>
+            1
+        </div>
+        <div class='col-3 botao' (click)='receberValor("2")'>
+            2
+        </div>
+        <div class='col-3 botao' (click)='receberValor("3")'>
+            3
+        </div>
+        <div class='col-3 botao'(click)='receberTipo("-")'>
+            -
+        </div>
+        <div class='col-3 botao'(click)='receberValor("0")'>
+            0
+        </div>
+        <div class='col-3 botao'(click)='receberValor(".")'>
+            .
+        </div>
+        <div class='col-3 botao2'(click)= "calcularResultado()">
+            =
+        </div>
+        <div class='col-3 botao'(click)='receberTipo("+")'>
+            +
+        </div>
     </div>
 </div>

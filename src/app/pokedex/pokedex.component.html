@@ -1,0 +1,13 @@
+
+
+<div class="container">
+    <div class="row">
+  
+        <div class="col-3 pokedex" (click) = "abrirPokemon(pokemon.id)" *ngFor="let pokemon of pokemons">
+            <img class= "pokeimagem" src="{{pokemon.img}}">
+            <p class="numero">N° {{pokemon.num}}</p>
+            <p class="name" >{{pokemon.name}}</p>
+            <img class= "tipo" src="assets/tipos/{{tipo}}.png" *ngFor="let tipo of pokemon.type">
+        </div>
+    </div>
+</div>

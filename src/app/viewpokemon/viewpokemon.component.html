@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12 viewpokemon">
+                    <img src="{{pokemon.img}}" alt="">
+                </div>
+                <!-- <div class="col-12 viewpokemon">
+                <div class="stats"> auehuaheue</div>
+            </div> -->
+            </div>
+
+
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="titulopokemon">{{pokemon.name}}</h3>
+                    <span class="numeropokemon">N° {{pokemon.num}}</span>
+                    <p class="descricao">{{pokemon.descricao}}</p>
+                </div>
+                <div class="col-12 info">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="titulo">Height</p>
+                            <p class="descricao">{{pokemon.height}}</p>
+                            <p class="titulo">Weight</p>
+                            <p class="descricao">{{pokemon.weight}}</p>
+                            <!-- <p class="titulo">Gender</p>
+                        <p class="descricao2">♀ ♂</p> -->
+                        </div>
+                        <div class="col-6">
+                            <!-- <p class="titulo">Category</p>
+                        <p class="descricao">Shellfish</p> -->
+                            <p class="titulo">Abilities</p>
+                            <p class="descricao" *ngFor="let power of pokemon.powers">{{power.name}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="type">Type</p>
+                    <img class="tipo" src="assets/tipos/{{tipo}}.png" *ngFor="let tipo of pokemon.type">
+                </div>
+                <div class="col-12">
+                    <p class="weaknesses">Weaknesses</p>
+                    <img src="assets/tipos/{{tipo}}.png" *ngFor="let tipo of pokemon.weaknesses" alt="">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12">
+            <div class="row evolucoes">
+                <div class="col-4 " *ngFor="let evl of pokemon.prev_evolution">
+                    <div class="row">
+                        <div class="col-12 alinhar">
+                            <div class="imagens">
+                                <img src="{{evl.image}}" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 alinhar">
+                            <span class="descricaoimagem">{{evl.name}}</span></div>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="row">
+                        <div class="col-12 alinhar">
+                            <div class="imagens">
+                                <img src="{{pokemon.img}}" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 alinhar">
+                            <span class="descricaoimagem">{{pokemon.name}}</span></div>
+                    </div>
+                </div>
+                <div class="col-4 " *ngFor="let evl of pokemon.next_evolution">
+                    <div class="row">
+                        <div class="col-12 alinhar">
+                            <div class="imagens">
+                                <img src="{{evl.image}}" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 alinhar">
+                            <span class="descricaoimagem">{{evl.name}}</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
