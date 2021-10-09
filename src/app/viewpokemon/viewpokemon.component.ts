@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-viewpokemon',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewpokemonComponent implements OnInit {
 
-  constructor() { }
+  id: any = null
+  pokemon: any = {}
+  constructor(private service: ApiserviceService,private route: ActivatedRoute ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.id = this.route.snapshot.params['id']
+    this.getDados()
+  }
+  getDados(){
+    this.service.getPokemonId(this.id).subscribe((result:any)=> {
+        this.pokemon = result.pokemon
+        console.log(this.pokemon)
+    })
   }
 
 }

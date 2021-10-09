@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -7,15 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent implements OnInit {
-
-  constructor(private route: Router) { }
+  pokemons: any = [];
+  constructor(private route: Router, private service: ApiserviceService) { }
 
   ngOnInit(): void {
+    this.getDados()
   }
-  abrirPokemon() {
+
+  abrirPokemon(id:any) {
     this.route.navigate(
-      ["/viewpokemon"]
+      [`/viewpokemon/${id}`]
     )
+  }
+
+  getDados() {
+    this.service.getPokemons().subscribe((result: any) => {
+      this.pokemons = result.pokemons;
+      console.log(this.pokemons)
+    })
   }
 
 }

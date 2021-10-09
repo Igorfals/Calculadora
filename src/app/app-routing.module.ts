@@ -17,7 +17,7 @@ const routes: Routes = [
       
   },
   {
-    path: 'viewpokemon',
+    path: 'viewpokemon/:id',
     component: ViewpokemonComponent
     
 }
