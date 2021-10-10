@@ -1,13 +1,22 @@
-
-
 <div class="container">
     <div class="row">
-  
-        <div class="col-3 pokedex" (click) = "abrirPokemon(pokemon.id)" *ngFor="let pokemon of pokemons">
-            <img class= "pokeimagem" src="{{pokemon.img}}">
+        <div class="col-12">
+            <form>
+                <div class="form-group formulario">
+                    <label for="exampleInputEmail1">Pesquisar por:</label><br><br>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o nome do Pokemon">
+                </div>
+            </form>
+        </div>
+        <div class="col-3 pokedex" (click)="abrirPokemon(pokemon.id)" *ngFor="let pokemon of pokemons">
+            <img class="pokeimagem" src="{{pokemon.img}}">
             <p class="numero">N° {{pokemon.num}}</p>
-            <p class="name" >{{pokemon.name}}</p>
-            <img class= "tipo" src="assets/tipos/{{tipo}}.png" *ngFor="let tipo of pokemon.type">
+            <p class="name">{{pokemon.name}}</p>
+            <img class="tipo" src="assets/tipos/{{tipo}}.png" *ngFor="let tipo of pokemon.type">
+        </div>
+        <div class="col-12 paginacao">
+            <ngb-pagination class="d-flex justify-content-center" [collectionSize]="70" [(page)]="page"></ngb-pagination>
         </div>
     </div>
+
 </div>

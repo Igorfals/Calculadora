@@ -9,6 +9,7 @@ import { ApiserviceService } from '../apiservice.service';
 })
 export class PokedexComponent implements OnInit {
   pokemons: any = [];
+  page:number = 1
   constructor(private route: Router, private service: ApiserviceService) { }
 
   ngOnInit(): void {

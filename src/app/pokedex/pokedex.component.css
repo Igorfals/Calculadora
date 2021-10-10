@@ -1,24 +1,33 @@
 .pokedex {
     border: 1px solid #ccc;
 }
+
 .name {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
-.tipo{
-  width: 50%;
 
+.tipo {
+    width: 50%;
 }
-.numero{
+
+.numero {
     color: gray;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
-
 }
 
 .pokeimagem {
     width: 100%;
-    
+}
+
+.paginacao {
+    padding: 30px
+}
+
+.formulario {
+    padding: 15px;
+    margin: 15px;
 }

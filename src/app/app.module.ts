@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { ViewpokemonComponent } from './viewpokemon/viewpokemon.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
